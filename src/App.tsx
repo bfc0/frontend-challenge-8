@@ -14,7 +14,7 @@ function App() {
   const [cart, setCart] = useState<Array<Item>>([])
   return (
     <>
-      <header>Logo</header>
+      <header>{cart.toString()}</header>
       <Carousel />
       <div className='container'>
         <h2>sneaker company</h2>
@@ -28,7 +28,8 @@ function App() {
     </>
   )
   function cartAdder(item: Item) {
-    return
+    setCart(cart => [...cart, item])
+    console.log(cart)
   }
 }
 

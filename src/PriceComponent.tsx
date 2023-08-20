@@ -17,18 +17,19 @@ export function PriceComponent({ adder }: { "adder": (x: Item) => void }) {
                     onClick={() => setNumber(p => p + 1)}
                 />
             </div>
-            <button><img src="/images/icon-cart.svg" id="cart"
+            <button
                 onClick={() => {
                     if (number <= 0) {
                         return
                     }
+                    console.log("click!")
                     adder({
                         name: "1234",
                         quantity: number,
                         price: 125.00,
                     })
-                }}
-            />Add to cart</button>
+                }}>
+                <img src="/images/icon-cart.svg" id="cart" />Add to cart</button>
         </div>
     )
 }
