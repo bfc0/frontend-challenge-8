@@ -1,0 +1,87 @@
+.price-component {
+    display: flex;
+    flex-direction: column;
+}
+
+.price {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1em;
+}
+
+.price h1 {
+    margin-block: auto;
+}
+
+.price span {
+    background-color: var(--clr-pale-orange);
+    color: var(--clr-orange);
+    font-weight: 700;
+    justify-self: flex-start;
+    margin-right: auto;
+    margin-left: 1em;
+    padding-inline: 0.8em;
+    border-radius: 0.3em;
+    padding-block: 0.3em;
+}
+
+.price s {
+    color: var(--clr-grayish-blue);
+    font-weight: 700;
+}
+
+.count-controls {
+    background-color: var(--clr-light-grayish-blue);
+    padding: 1em;
+    border-radius: 0.4em;
+    margin-bottom: 1em;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.count-controls em {
+    font-style: normal;
+    font-weight: 700;
+}
+
+.count-controls img {
+    width: 0.8em;
+}
+
+.count-controls img:first-of-type {
+    height: 0.3em;
+}
+
+.price-component button {
+    background-color: var(--clr-orange);
+    border: none;
+    padding: 1.4em;
+    border-radius: 0.5em;
+    color: white;
+    font-weight: 700;
+    font-size: 0.9em;
+    letter-spacing: 0.5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+    box-shadow: 0 2em 1em var(--clr-pale-orange);
+}
+
+.price-component button:hover {
+    cursor: pointer;
+}
+
+.price-component button:img {
+    filter: brightness(100%)
+}
+
+#cart path {
+    fill: red;
+}
+
+svg {
+    fill: red;
+}

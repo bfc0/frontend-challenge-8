@@ -1,35 +1,35 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
+import { Carousel } from './Carousel'
+import { PriceComponent } from './PriceComponent'
+
+export type Item = {
+  name: string,
+  quantity: number,
+  price: number,
+}
 
 function App() {
-  const [count, setCount] = useState(0)
 
+  const [cart, setCart] = useState<Array<Item>>([])
   return (
     <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
+      <header>Logo</header>
+      <Carousel />
+      <div className='container'>
+        <h2>sneaker company</h2>
+        <h1>Fall Limited Edition Sneakers</h1>
+        <p>These low-profile sneakers are your perfect casual wear companion.
+          Featuring a durable rubber outer sole, they'll withstand everything
+          the weather can offer.
         </p>
+        <PriceComponent adder={cartAdder} />
       </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
     </>
   )
+  function cartAdder(item: Item) {
+    return
+  }
 }
 
 export default App
