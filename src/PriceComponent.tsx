@@ -22,7 +22,6 @@ export function PriceComponent({ adder }: { "adder": (x: Item) => void }) {
                     if (number <= 0) {
                         return
                     }
-                    console.log("click!")
                     adder({
                         name: "1234",
                         quantity: number,

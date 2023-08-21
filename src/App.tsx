@@ -14,22 +14,47 @@ function App() {
   const [cart, setCart] = useState<Array<Item>>([])
   return (
     <>
-      <header>{cart.toString()}</header>
-      <Carousel />
-      <div className='container'>
-        <h2>sneaker company</h2>
-        <h1>Fall Limited Edition Sneakers</h1>
-        <p>These low-profile sneakers are your perfect casual wear companion.
-          Featuring a durable rubber outer sole, they'll withstand everything
-          the weather can offer.
-        </p>
-        <PriceComponent adder={cartAdder} />
-      </div>
+      <header>{JSON.stringify(cart)}
+      </header>
+      <nav className='navbar'>
+        <img src="/images/logo.svg" alt="sneakers logo" className="logo" />
+        <div className='nav-items'>
+          <ul>
+            <li><a href="#">Collections</a></li>
+            <li><a href="#">Men</a></li>
+            <li><a href="#">Women</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </div>
+        <div className='cart-container'>
+          <img src="/images/icon-cart.svg" alt="cart" />
+          <img src="/images/image-avatar.png" />
+        </div>
+      </nav>
+      <main>
+        <Carousel />
+        <div className='container'>
+          <h2>sneaker company</h2>
+          <h1>Fall Limited Edition Sneakers</h1>
+          <p>These low-profile sneakers are your perfect casual wear companion.
+            Featuring a durable rubber outer sole, they'll withstand everything
+            the weather can offer.
+          </p>
+          <PriceComponent adder={cartAdder} />
+        </div>
+      </main>
     </>
   )
+
   function cartAdder(item: Item) {
-    setCart(cart => [...cart, item])
-    console.log(cart)
+    if (!cart.length) {
+      setCart([item])
+      return
+    }
+    const p = cart[0]
+    p.quantity += item.quantity
+    setCart([p])
   }
 }
 
