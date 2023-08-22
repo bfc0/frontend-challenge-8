@@ -81,3 +81,27 @@
 #cart path {
     fill: red;
 }
+
+@media(width>1000px) {
+    .price-component {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .price {
+        flex-basis: 100%;
+    }
+
+    .count-controls {
+        flex-basis: 40%;
+        margin-bottom: 0;
+        padding: 1.3em;
+    }
+
+    button {
+        flex-basis: 55%;
+        padding: 1em;
+    }
+}
