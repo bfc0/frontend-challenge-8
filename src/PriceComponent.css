@@ -10,8 +10,9 @@
     margin-bottom: 1em;
 }
 
-.price h1 {
+.price h3 {
     margin-block: auto;
+    font-size: 2em;
 }
 
 .price span {
@@ -92,6 +93,8 @@
 
     .price {
         flex-basis: 100%;
+        flex-flow: row wrap;
+        margin-block: 2em;
     }
 
     .count-controls {
@@ -104,4 +107,10 @@
         flex-basis: 55%;
         padding: 1em;
     }
+
+    s {
+        flex-basis: 100%;
+        display: block;
+    }
+
 }

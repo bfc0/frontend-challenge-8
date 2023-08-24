@@ -2,12 +2,16 @@ import { useState } from 'react'
 import './PriceComponent.css'
 import { Item } from './App.tsx'
 
-export function PriceComponent({ adder }: { "adder": (x: Item) => void }) {
+type Props = {
+    adder: (x: Item) => void,
+}
+
+export function PriceComponent({ adder }: Props) {
 
     const [number, setNumber] = useState(0)
     return (
         <div className='price-component'>
-            <div className='price'><h1>$125.00</h1><span>50%</span> <s>$250.00</s></div>
+            <div className='price'><h3>$125.00</h3><span>50%</span> <s>$250.00</s></div>
             <div className='count-controls'>
                 <img src='/images/icon-minus.svg'
                     onClick={() => setNumber(p => p > 0 ? p - 1 : 0)}

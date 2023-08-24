@@ -34,7 +34,7 @@ export function Carousel() {
             <div className="previews">
                 {[1, 2, 3, 4].map(i => (
                     <img src={`/images/image-product-${i}-thumbnail.jpg`}
-                        onClick={() => { setCurrIdx(i - 1) }}
+                        onClick={() => setCurrIdx(i - 1)}
                         className={i === currIdx + 1 ? "selected" : ""}
                     />
                 ))}
