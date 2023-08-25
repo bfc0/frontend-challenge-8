@@ -60,6 +60,10 @@ p {
   display: none;
 }
 
+nav {
+  position: relative;
+}
+
 ul {
   list-style: none;
   height: 100%;

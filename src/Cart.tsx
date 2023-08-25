@@ -9,4 +9,14 @@ type Props = {
 
 export function Cart(props: Props) {
 
+    return (
+        <div className='cart'>
+            <div className='header'>
+                <h3>Cart</h3>
+            </div>
+            <div className='content'>
+                Your Cart is Empty
+            </div>
+        </div>
+    )
 }

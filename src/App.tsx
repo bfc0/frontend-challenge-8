@@ -2,6 +2,7 @@ import { useState } from 'react'
 import './App.css'
 import { Carousel } from './Carousel'
 import { PriceComponent } from './PriceComponent'
+import { Cart } from './Cart'
 
 export type Item = {
   name: string,
@@ -12,6 +13,8 @@ export type Item = {
 function App() {
 
   const [cart, setCart] = useState<Array<Item>>([])
+  const [showCart, setShowCart] = useState(false)
+
   return (
     <>
       <header>{JSON.stringify(cart)}
@@ -28,9 +31,11 @@ function App() {
           </ul>
         </div>
         <div className='cart-container'>
-          <img src="/images/icon-cart-gr.svg" alt="cart" />
+          <img src="/images/icon-cart-gr.svg" alt="cart"
+            onClick={() => setShowCart(cart => !cart)} />
           <img src="/images/image-avatar.png" />
         </div>
+        {showCart && <Cart cart={cart} adder={setCart} />}
       </nav>
       <main>
         <Carousel />

@@ -1,0 +1,30 @@
+.cart {
+    position: absolute;
+    width: 20em;
+    right: 0;
+    bottom: -8em;
+    background-color: white;
+    background: solid;
+    box-shadow: 5px 20px 50px -10px hsla(0, 2%, 66%, 0.694);
+    border-radius: 0.5em;
+}
+
+.cart h3 {
+    color: var(--clr-very-dark-blue);
+    margin-bottom: 0;
+}
+
+.header {
+    padding: 1em;
+    border-bottom: 1px solid var(--clr-light-grayish-blue);
+    display: flex;
+    align-items: center;
+}
+
+.cart .content {
+    padding: 1em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-block: 2em;
+}
