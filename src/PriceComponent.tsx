@@ -27,7 +27,7 @@ export function PriceComponent({ adder }: Props) {
                         return
                     }
                     adder({
-                        name: "1234",
+                        name: "Fall Limited Edition Sneakers",
                         quantity: number,
                         price: 125.00,
                     })

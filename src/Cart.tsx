@@ -15,7 +15,17 @@ export function Cart(props: Props) {
                 <h3>Cart</h3>
             </div>
             <div className='content'>
-                Your Cart is Empty
+                {!props.cart.length && <p>Your Cart is Empty</p>}
+                {props.cart.map(item => (
+                    <>
+                        <div className="cart-img-holder"><img src="/images/image-product-1-thumbnail.jpg" /></div>
+                        <div>
+                            <p>{item.name}</p>
+                            <div><button>Checkout</button></div>
+                        </div>
+
+                    </>
+                ))}
             </div>
         </div>
     )

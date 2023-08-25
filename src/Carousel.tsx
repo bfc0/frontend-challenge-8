@@ -10,7 +10,6 @@ export function Carousel() {
     ]
 
     const [currIdx, setCurrIdx] = useState(0);
-    const [showCart, setShowCart] = useState(false)
 
     return (<>
         <div className='carousel' id="carousel">
