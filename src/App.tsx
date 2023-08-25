@@ -28,7 +28,7 @@ function App() {
           </ul>
         </div>
         <div className='cart-container'>
-          <img src="/images/icon-cart.svg" alt="cart" />
+          <img src="/images/icon-cart-gr.svg" alt="cart" />
           <img src="/images/image-avatar.png" />
         </div>
       </nav>

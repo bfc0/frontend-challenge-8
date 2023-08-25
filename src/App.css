@@ -78,10 +78,21 @@ a {
   display: flex;
   justify-self: flex-end;
   margin-left: auto;
+  align-items: center;
 }
 
 .cart-container img {
   width: 3em;
+}
+
+.cart-container img:first-of-type {
+  width: 1.5em;
+  height: 1.5em;
+  margin-right: 1em;
+}
+
+.cart-container img:first-of-type:hover {
+  cursor: pointer;
 }
 
 @media(width > 800px) {

@@ -76,7 +76,11 @@
 }
 
 .price-component button:img {
-    filter: brightness(100%)
+    filter: brightness(100%);
+}
+
+.price-component img:hover {
+    cursor: pointer;
 }
 
 #cart path {
