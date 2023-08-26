@@ -36,4 +36,5 @@ export function PriceComponent({ adder }: Props) {
                 <img src="./images/icon-cart.svg" id="cart" />Add to cart</button>
         </div>
     )
+
 }

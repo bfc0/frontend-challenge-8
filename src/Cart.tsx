@@ -43,4 +43,5 @@ export function Cart(props: Props) {
             </div>
         </div>
     )
+
 }
