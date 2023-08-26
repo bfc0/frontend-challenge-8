@@ -38,7 +38,6 @@
     margin: auto;
     width: 1em;
     height: 1em;
-    /* margin-left: -0.1em; */
 }
 
 .carousel button:last-of-type img {
@@ -117,5 +116,10 @@
 
     .selected {
         border: 2px solid var(--clr-orange);
+    }
+
+    .modal button {
+        display: block;
+        top: 40%;
     }
 }

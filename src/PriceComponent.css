@@ -55,7 +55,7 @@
     height: 0.3em;
 }
 
-button {
+.cart-btn {
     background-color: var(--clr-orange);
     border: none;
     padding: 1.4em;
@@ -71,7 +71,7 @@ button {
     box-shadow: 0 2em 1em var(--clr-pale-orange);
 }
 
-.price-component button:hover {
+button:hover {
     cursor: pointer;
 }
 

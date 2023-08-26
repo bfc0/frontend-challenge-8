@@ -21,7 +21,7 @@ export function PriceComponent({ adder }: Props) {
                     onClick={() => setNumber(p => p + 1)}
                 />
             </div>
-            <button
+            <button className='cart-btn'
                 onClick={() => {
                     if (number <= 0) {
                         return
@@ -30,6 +30,7 @@ export function PriceComponent({ adder }: Props) {
                         name: "Fall Limited Edition Sneakers",
                         quantity: number,
                         price: 125.00,
+                        image: "/images/image-product-1-thumbnail.jpg",
                     })
                 }}>
                 <img src="/images/icon-cart.svg" id="cart" />Add to cart</button>

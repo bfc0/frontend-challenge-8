@@ -1,13 +1,14 @@
 .cart {
     position: absolute;
-    width: 20em;
+    width: 100%;
     right: 0;
-    bottom: -10em;
+    bottom: -14em;
     background-color: white;
     background: solid;
     box-shadow: 5px 20px 50px -10px hsla(0, 2%, 66%, 0.694);
     border-radius: 0.5em;
     z-index: 3;
+    font-size: 1.1.em;
 }
 
 .cart h3 {
@@ -24,9 +25,9 @@
 
 .cart .content {
     display: flex;
-    align-items: center;
     justify-content: center;
-    padding-block: 2em;
+    flex-direction: column;
+    padding: 1em;
 }
 
 .cart-img-holder {
@@ -41,4 +42,38 @@
 
 .cart button {
     width: 100%;
+}
+
+.cart em {
+    font-style: normal;
+    font-weight: 700;
+    color: var(--clr-very-dark-blue);
+    font-size: 1.3em;
+}
+
+.cart p {
+    margin-bottom: 0;
+}
+
+.cart button {
+    box-shadow: none;
+}
+
+.cart-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1em;
+}
+
+.cart img:last-of-type {
+    cursor: pointer;
+}
+
+@media (min-width: 1000px) {
+    .cart {
+        width: 25em;
+        bottom: -12em;
+    }
+
 }

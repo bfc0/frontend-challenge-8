@@ -36,6 +36,7 @@ export function Carousel() {
                     <img src={`/images/image-product-${i}-thumbnail.jpg`}
                         onClick={() => setCurrIdx(i - 1)}
                         className={i === currIdx + 1 ? "selected" : ""}
+                        key={i}
                     />
                 ))}
             </div>
@@ -44,6 +45,9 @@ export function Carousel() {
     </>
     )
     function toggleModal() {
+        if (window.innerWidth < 1000) {
+            return
+        }
         document.querySelector("#carousel")?.classList.toggle("modal")
         document.querySelector(".overlay")?.classList.toggle("hidden")
         document.querySelector(".close")?.classList.toggle("hidden")

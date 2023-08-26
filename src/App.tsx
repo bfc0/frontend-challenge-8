@@ -8,6 +8,7 @@ export type Item = {
   name: string,
   quantity: number,
   price: number,
+  image: string,
 }
 
 function App() {
@@ -17,11 +18,13 @@ function App() {
 
   return (
     <>
-      <header>{JSON.stringify(cart)}
-      </header>
       <nav className='navbar'>
+        <img src="/images/icon-menu.svg" alt="burger menu" className='burger-menu' onClick={() => toggleNav()} />
         <img src="/images/logo.svg" alt="sneakers logo" className="logo" />
         <div className='nav-items'>
+          <button className='mobile-close' onClick={() => toggleNav()}>
+            <img src="/images/icon-close.svg" alt="close menu" />
+          </button>
           <ul>
             <li><a href="#">Collections</a></li>
             <li><a href="#">Men</a></li>
@@ -33,9 +36,10 @@ function App() {
         <div className='cart-container'>
           <img src="/images/icon-cart-gr.svg" alt="cart"
             onClick={() => setShowCart(cart => !cart)} />
+          {!!cart.length && <span className='quant'>{cart[0].quantity}</span>}
           <img src="/images/image-avatar.png" />
         </div>
-        {showCart && <Cart cart={cart} adder={setCart} />}
+        {showCart && <Cart cart={cart} cartSetter={setCart} cartShow={setShowCart} />}
       </nav>
       <main>
         <Carousel />
@@ -60,6 +64,9 @@ function App() {
     const p = cart[0]
     p.quantity += item.quantity
     setCart([p])
+  }
+  function toggleNav() {
+    document.querySelector('.nav-items')?.classList.toggle('nav-active-mobile')
   }
 }
 
