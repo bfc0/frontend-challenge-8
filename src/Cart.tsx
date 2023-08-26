@@ -21,7 +21,7 @@ export function Cart(props: Props) {
                             <p>${item.price.toFixed(2)} x {item.quantity} &nbsp; <em>${(item.price * item.quantity).toFixed(2)}</em></p>
                         </div>
                         <div>
-                            <img src="/images/icon-delete.svg" alt="delete" onClick={() => {
+                            <img src="./images/icon-delete.svg" alt="delete" onClick={() => {
                                 props.cartSetter([])
                                 props.cartShow(false)
                             }} />
